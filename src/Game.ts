@@ -8,7 +8,7 @@ export enum PieceType {
 }
 
 export enum Color {
-    Green,
+    Black,
     White,
 }
 export type Cell = [number, number];
@@ -25,11 +25,11 @@ export const TicTacToe = {
     setup: (): MyGameState => ({
         cells: prepend(
             [
-                [PieceType.Pawn, Color.Green],
-                [PieceType.Pawn, Color.Green],
-                [PieceType.King, Color.Green],
-                [PieceType.Pawn, Color.Green],
-                [PieceType.Pawn, Color.Green],
+                [PieceType.Pawn, Color.Black],
+                [PieceType.Pawn, Color.Black],
+                [PieceType.King, Color.Black],
+                [PieceType.Pawn, Color.Black],
+                [PieceType.Pawn, Color.Black],
             ] as Row,
             append(
                 [
@@ -44,13 +44,13 @@ export const TicTacToe = {
         ) as Board,
     }),
 
-    endIf: (G: MyGameState, _ctx: Ctx) => {
+    endIf: (G: MyGameState, ctx: Ctx) => {
         const centerPiece = G.cells[2][2];
 
         if (centerPiece && centerPiece[0] === PieceType.King) {
             return {
                 winner: (
-                    centerPiece[1] === Color.Green ? "0" : "1"
+                    centerPiece[1] === Color.Black ? "0" : "1"
                 )
             }
         }

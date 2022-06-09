@@ -6,8 +6,8 @@ import { TicTacToeBoard } from "./Board";
 const App = () => (
   <div>
     <Lobby
-      gameServer={`${window.location.protocol}://${window.location.hostname}:8001`}
-      lobbyServer={`${window.location.protocol}://${window.location.hostname}:8001`}
+      gameServer={`http://${window.location.hostname}:8001`}
+      lobbyServer={`http://${window.location.hostname}:8001`}
       gameComponents={
         [
           {
