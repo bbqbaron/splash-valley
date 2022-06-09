@@ -60,7 +60,9 @@ export const TicTacToe = {
         minMoves: 1,
         maxMoves: 1
     },
-
+    name: "Kings_Valley",
+    minPlayers: 2,
+    maxPlayers: 2,
     moves: {
         sendPiece: (G: MyGameState, ctx: Ctx, [x, y]: Cell, [x2, y2]: Cell) => {
             const dx = x2 > x ? 1 : x2 == x ? 0 : -1;
