@@ -13,4 +13,8 @@ if (port) {
     portNum = parseInt(port);
 }
 
+server.router.get("/", (ctx) => {
+    ctx.body = "HI"
+})
+
 server.run(portNum)
