@@ -7,4 +7,10 @@ const server = Server({
     Origins.LOCALHOST_IN_DEVELOPMENT]
 })
 
-server.run(8000)
+let port = process.env.PORT;
+let portNum = 3000;
+if (port) {
+    portNum = parseInt(port);
+}
+
+server.run(portNum)
