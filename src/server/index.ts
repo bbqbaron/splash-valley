@@ -1,5 +1,6 @@
-import { TicTacToe } from "./Game";
+import { TicTacToe } from "../lib/game";
 import { Origins, Server } from "boardgame.io/server";
+import { createReadStream } from 'fs';
 
 const server = Server({
     games: [TicTacToe],
@@ -14,7 +15,13 @@ if (port) {
 }
 
 server.router.get("/", (ctx) => {
-    ctx.body = "HI"
+    ctx.type = 'html'
+    ctx.body = createReadStream('public/index.html');
+})
+
+server.router.get("/public/index.js", (ctx) => {
+    ctx.type = 'text/javascript'
+    ctx.body = createReadStream('public/index.js');
 })
 
 server.run(portNum)
