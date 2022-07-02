@@ -11893,7 +11893,7 @@ function TicTacToeBoard(props) {
 }
 
 const App = () => (React.createElement("div", null,
-    React.createElement(Lobby, { gameServer: `https://${window.location.hostname}:8001`, lobbyServer: `https://${window.location.hostname}:8001`, gameComponents: [
+    React.createElement(Lobby, { gameServer: `https://${window.location.hostname}`, lobbyServer: `https://${window.location.hostname}`, gameComponents: [
             {
                 game: TicTacToe,
                 board: TicTacToeBoard
