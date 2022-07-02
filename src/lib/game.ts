@@ -1,5 +1,3 @@
-import { Ctx } from "boardgame.io";
-import { INVALID_MOVE } from "boardgame.io/core";
 import { append, prepend, repeat } from "ramda";
 
 export enum PieceType {
@@ -44,7 +42,7 @@ export const TicTacToe = {
         ) as Board,
     }),
 
-    endIf: (G: MyGameState, _ctx: Ctx) => {
+    endIf: (G: MyGameState, _ctx: any) => {
         const centerPiece = G.cells[2][2];
 
         if (centerPiece && centerPiece[0] === PieceType.King) {
@@ -64,7 +62,7 @@ export const TicTacToe = {
     minPlayers: 2,
     maxPlayers: 2,
     moves: {
-        sendPiece: (G: MyGameState, ctx: Ctx, [x, y]: Cell, [x2, y2]: Cell) => {
+        sendPiece: (G: MyGameState, ctx: any, [x, y]: Cell, [x2, y2]: Cell) => {
             const dx = x2 > x ? 1 : x2 == x ? 0 : -1;
             const dy = y2 > y ? 1 : y2 == y ? 0 : -1;
             const piece = G.cells[x][y]!;
@@ -89,7 +87,7 @@ export const TicTacToe = {
             }
             // no pawns in center _as final stop_
             if (piece[0] == PieceType.Pawn && tx == 2 && ty == 2) {
-                return INVALID_MOVE;
+                return "INVALID_MOVE";
             }
 
             G.cells[x][y] = null;

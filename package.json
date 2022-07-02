@@ -5,7 +5,7 @@
   "engines": {
     "node": "16.x"
   },
-  "main": "dist/server/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node .",
     "build": "tsc",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "^2.6.1",
+    "@rollup/plugin-replace": "^4.0.0",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",

@@ -1,7 +1,14 @@
 import React from "react";
 import App from "./app";
-import reportWebVitals from "./reportWebVitals";
+// import reportWebVitals from "./reportWebVitals";
 import { render } from "react-dom";
+
+// render(
+//   <React.StrictMode>
+//     WTF
+//     </React.StrictMode>,
+//   document.getElementById("root")
+// );
 
 render(
   <React.StrictMode>
@@ -10,7 +17,10 @@ render(
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// // If you want to start measuring performance in your app, pass a function
+// // to log results (for example: reportWebVitals(console.log))
+// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
+
+console.log('fff')
+export {}

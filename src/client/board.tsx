@@ -1,8 +1,7 @@
 import { BoardProps } from 'boardgame.io/dist/types/packages/react';
-import { Ctx } from 'boardgame.io';
 import React, { useState } from 'react';
-import { Piece, MyGameState, PieceType, Cell, Color } from '../lib/game';
-import { assoc, equals, map, range } from 'ramda';
+import { MyGameState, PieceType, Cell, Color } from '../lib/game';
+import { equals, map, range } from 'ramda';
 
 interface MyGameProps extends BoardProps<MyGameState> {
     moves: {

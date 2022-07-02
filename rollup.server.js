@@ -9,7 +9,10 @@ export default {
     dir: 'dist',
     format: 'cjs'
   },
-  plugins: [typescript(), cjs(), nodeResolve({
+  plugins: [typescript({
+    // TODO what do when developing? how does vscode pick a tsconfig? or is that wrong?
+    tsconfig: "tsconfig.json"
+  }), cjs(), nodeResolve({
     preferBuiltins: true,
   }), json()]
 };
