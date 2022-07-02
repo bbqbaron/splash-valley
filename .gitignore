@@ -10,6 +10,4 @@ npm-debug.log
 # Docker
 Dockerfile
 docker-compose.yml
-dist
-public/index.js
 .parcel-cache
